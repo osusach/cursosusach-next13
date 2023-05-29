@@ -1,6 +1,15 @@
 # Cursos USACH
 
-Web platform to find reviews and rate courses of the University of Santiago, Chile.
+web platform to find reviews and rate courses of the University of Santiago, Chile.
+
+## technologies
+
+- [Next 13](https://nextjs.org/docs) using the App router
+- TypeScript
+- [Zod](https://zod.dev/)
+- Tailwind CSS
+- [LibSQL Client](https://docs.turso.tech/reference/client-access/javascript-typescript-sdk)
+- [HeroIcons](heroicons.com/)
 
 ## getting started
 
@@ -38,7 +47,6 @@ CREATE TABLE User (
     user_id INTEGER PRIMARY KEY,
     clerk_user_id TEXT,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE Course (
@@ -47,7 +55,6 @@ CREATE TABLE Course (
     instructor TEXT,
     major_id INTEGER,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (major_id) REFERENCES Major (major_id)
 );
 
@@ -60,7 +67,6 @@ CREATE TABLE Review (
     comment TEXT,
     course_content TEXT,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES User (user_id),
     FOREIGN KEY (course_id) REFERENCES Course (course_id)
 );
@@ -69,7 +75,6 @@ CREATE TABLE Major (
     major_id INTEGER PRIMARY KEY,
     major_name TEXT,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 ```
 
