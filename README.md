@@ -17,7 +17,7 @@ we recommend the use of [pnpm](https://pnpm.io/), but feel free to use other pac
 
 create a `.env.local` file in the root folder, you can get the auth token by using `turso db tokens create NAME_OF_YOUR_DB`, if you need the name of your db and the url you can use `turso db list` 
 
-the `.env.local` file shoul look like this
+the `.env.local` file should look like this
 
 ```zsh
 DB_URL=HERE_GOES_THE_TURSODB_URL
